@@ -11,7 +11,7 @@ const getStat = async () => {
     try {
         await axios.get('http://Iamonetrue404');
     } catch (err) {
-        Promise.reject(err);
+        return Promise.reject(err);
     }
 };
 
@@ -20,9 +20,9 @@ const getUser = async () => {
 };
 
 getUser().then((val) => {
-    console.log(`In the then: ${val}`);
+    console.log(`then: ${val}`);
 }).catch((err) => {
-    console.log(`Hi Edmond, one error has been found: ${err}`);
+    console.log(`catch: error`);
 });
 
-console.log(`Out of then: ${getUser()}`);
+// console.log(`Out of then: ${getUser()}`);
